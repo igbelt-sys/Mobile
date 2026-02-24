@@ -54,3 +54,41 @@ Organização do ambiente de desenvolvimento para futuros projetos
         - Ambiente: Mac / Win / Linux
         
 ***
+
+##Preparação do ambiente de desenvlolvimento
+
+### Instalação do FlutterSDK
+- download do arquivo ZIP na página flutter.dev
+- inclusao do flutter na pasta c:\src
+- inclusao do Bin nas variaveis de sistema 
+
+##Instalação do AndroidSDK
+- download do android SDK - command line tools
+- adicionar o command line ao src
+- adicionar o sdkmanager as variaveis de ambiente 
+- dowload dos pacotes 
+    - emulador 
+    - platform tools
+    - build tools
+- adicionar o adb e o emulador ao path de variaveis
+- criacao do emulador 
+-Build do emulador- via sdkmanager
+
+### Criação de projetos e Código da linha de comando
+
+- Criação de projetos 
+    - flutter create Nome_do_app
+        - flags 
+            - -- empty: cria um aplicativo "vazio"(hello hord)
+            - --platforms:  permit a selecao de uma plataforma de desenvolvimento 
+                - ex: --plataforms-android (Criaç~pa do projeto na plataforma android)
+    - exemplo de criação de um aplicatico android vazio
+        - flutter create Nome_do_app --empyt --plataforms=android
+        - obs: Nome do aplicativo: todas as letras minúsculas, separadas or _
+    - flutter doctor: 
+        - permite correção de pequenos problemas no flutter e identificaçãp soa parâmetros funcionas em relação a plataforma de desenvilvimento
+        - sempre rodar o flutter doctor no começo de desenvolvolcimeno
+    - flutter celan
+        - limpa o cach do build(apaga o apk anterior)
+    - flutter run -v 
+        build do app (apk)
