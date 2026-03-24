@@ -145,22 +145,22 @@ flutter pub upgrade
 ## Estrutura basica de um aplicativo em Flutter
 
 #### Árvore de widgets
-     ```mermaid
-    flowchart TD
-        subgraph MaterialApp["MaterialApp"]
-        end
-        subgraph Janelas 
-            StateLess["StateLess"]
-            StateFull["StateFull"]
-        end
-        subgraph Scafold["Scafold"]
-            AppBar["AppBar"]
-            Body["Body"]
-            BNBar["BNBar"]
-            Drawer["Drawer"]
-            FAButton["FAButton"]
-            SnackBar["SnackBar"]
-        end
-        MaterialApp --> Janelas
-        Janelas--> Scafold
-    ```
+```mermaid
+flowchart TD
+    subgraph MaterialApp["MaterialApp"]
+    end
+    subgraph Janelas
+        StateLess["StateLess"]
+        StateFull["StateFull"]
+    end
+    subgraph Scaffold["Scaffold"]
+        AppBar["AppBar"]
+        Body["Body"]
+        BNBar["BNBar"]
+        Drawer["Drawer"]
+        FAButton["FAButton"]
+        SnackBar["SnackBar"]
+    end
+    MaterialApp --> Janelas
+    Janelas --> Scaffold
+```
