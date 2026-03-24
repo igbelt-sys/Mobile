@@ -161,6 +161,6 @@ flutter pub upgrade
             FAButton["FAButton"]
             SnackBar["SnackBar"]
         end
-        MaterialApp -> Janelas
-        Janelas-> Scafold
+        MaterialApp --> Janelas
+        Janelas--> Scafold
     ```
