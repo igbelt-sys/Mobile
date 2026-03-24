@@ -1,94 +1,166 @@
+1. Ferramentas Utilizadas
 
-# Atividades Realizadas em Aula
+Git — Versionamento de código
 
-Nesta aula, realizamos uma introdução às ferramentas básicas de versionamento e organização de projetos.
+GitHub — Hospedagem de repositórios
 
-- Etapas desenvolvidas:
+Visual Studio Code — Editor de código
 
-- Download e instalação do Git
+Flutter SDK — Desenvolvimento multiplataforma
 
-- Acesso e configuração de uma conta no GitHub
+Android SDK — Build e emulação Android
 
-- Download e instalação do Visual Studio Code (VS Code)
+2. Configuração Inicial do Git
 
-- Conexão da conta do GitHub ao VS Code
-
-- Criação de pastas das matérias utilizando o terminal
-
-- Utilização de comandos básicos do Git para configuração inicial
-
-* Configuração do usuário com o comando:
+Configuração do e-mail global:
 
 git config --global user.email "seuemail@email.com"
 
+Organização das pastas das matérias via terminal
 
-Organização do ambiente de desenvolvimento para futuros projetos
+Estruturação inicial do ambiente para futuros projetos
 
----
+3. Tipos de Desenvolvimento Mobile
+🔹 Desenvolvimento Nativo
 
-## Tipos de desenvolvimento mobile 
-- nativo:
-    * Android
-        - SDK : Android SDK
-        - IDE : Android Studio
-        - Linguagens: Kotlin e Java
-        - Ambientes: Mac, Win, Linux
+Android
 
-    * IOS: 
-        - SDK: cocoa touch
-        - IDE: Xcode
-        - linguagens: Swift / Objecttype-c
-        - Ambientes: Mac
-    
-- Multiplataforma:
-    * React Native:
-        - SDK: Node.js
-        - IDE: Vscode
-        - Linguagens: JavaScript / Typescript
-        - Ambiente: Mac / Win / Linux
+SDK: Android SDK
 
-    * flutter:
-        - SDK: Flutter SDK
-        - IDE: Andoid Studio
-        - linguagens: Dart
-        - Ambiente: Mac / Win / Linux
-        
-***
+IDE: Android Studio
 
-##Preparação do ambiente de desenvlolvimento
+Linguagens: Kotlin, Java
 
-### Instalação do FlutterSDK
-- download do arquivo ZIP na página flutter.dev
-- inclusao do flutter na pasta c:\src
-- inclusao do Bin nas variaveis de sistema 
+Sistemas: Windows, Mac, Linux
 
-##Instalação do AndroidSDK
-- download do android SDK - command line tools
-- adicionar o command line ao src
-- adicionar o sdkmanager as variaveis de ambiente 
-- dowload dos pacotes 
-    - emulador 
-    - platform tools
-    - build tools
-- adicionar o adb e o emulador ao path de variaveis
-- criacao do emulador 
--Build do emulador- via sdkmanager
+iOS
 
-### Criação de projetos e Código da linha de comando
+SDK: Cocoa Touch
 
-- Criação de projetos 
-    - flutter create Nome_do_app
-        - flags 
-            - -- empty: cria um aplicativo "vazio"(hello hord)
-            - --platforms:  permit a selecao de uma plataforma de desenvolvimento 
-                - ex: --plataforms-android (Criaç~pa do projeto na plataforma android)
-    - exemplo de criação de um aplicatico android vazio
-        - flutter create Nome_do_app --empyt --plataforms=android
-        - obs: Nome do aplicativo: todas as letras minúsculas, separadas or _
-    - flutter doctor: 
-        - permite correção de pequenos problemas no flutter e identificaçãp soa parâmetros funcionas em relação a plataforma de desenvilvimento
-        - sempre rodar o flutter doctor no começo de desenvolvolcimeno
-    - flutter celan
-        - limpa o cach do build(apaga o apk anterior)
-    - flutter run -v 
-        build do app (apk)
+IDE: Xcode
+
+Linguagens: Swift, Objective-C
+
+Sistema: Mac
+
+🔹 Desenvolvimento Multiplataforma
+
+React Native
+
+SDK: Node.js
+
+IDE: VS Code
+
+Linguagens: JavaScript, TypeScript
+
+Sistemas: Windows, Mac, Linux
+
+Flutter
+
+SDK: Flutter SDK
+
+IDE: Android Studio
+
+Linguagem: Dart
+
+Sistemas: Windows, Mac, Linux
+
+4. Preparação do Ambiente
+Instalação do Flutter
+
+Download do arquivo no site oficial
+
+Extração para C:\src
+
+Adição de C:\src\flutter\bin ao PATH
+
+Instalação do Android SDK
+
+Download do Command Line Tools
+
+Configuração do sdkmanager
+
+Instalação dos pacotes:
+
+emulator
+
+platform-tools
+
+build-tools
+
+Adição do adb ao PATH
+
+Criação e build do emulador
+
+5. Comandos Básicos do Flutter
+Criar projeto
+flutter create nome_do_app
+Criar projeto vazio para Android
+flutter create nome_do_app --empty --platforms=android
+
+Observação:
+O nome do aplicativo deve estar em minúsculas e separado por _.
+
+Verificar ambiente
+flutter doctor
+
+Verifica configurações
+
+Identifica problemas
+
+Recomenda-se executar antes de iniciar o desenvolvimento
+
+Limpar build
+flutter clean
+
+Remove cache
+
+Apaga build anterior
+
+Executar aplicação
+flutter run -v
+
+Realiza o build do APK
+
+Exibe logs detalhados
+
+6. Gerenciamento de Dependências (Pub)
+
+Adicionar dependência
+
+flutter pub add nome_da_dependencia
+
+Instalar dependências do projeto
+
+flutter pub get
+
+Verificar dependências desatualizadas
+
+flutter pub outdated
+
+Atualizar dependências
+
+flutter pub upgrade
+
+## Estrutura basica de um aplicativo em Flutter
+
+#### Árvore de widgets
+     ```mermaid
+    flowchart TD
+        subgraph MaterialApp["MaterialApp"]
+        end
+        subgraph Janelas 
+            StateLess["StateLess"]
+            StateFull["StateFull"]
+        end
+        subgraph Scafold["Scafold"]
+            AppBar["AppBar"]
+            Body["Body"]
+            BNBar["BNBar"]
+            Drawer["Drawer"]
+            FAButton["FAButton"]
+            SnackBar["SnackBar"]
+        end
+        MaterialApp -> Janelas
+        Janelas-> Scafold
+    ```
